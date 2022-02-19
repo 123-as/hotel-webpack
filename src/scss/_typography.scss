@@ -1,0 +1,42 @@
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    @include  respond(md){
+        width: 55%;
+    }
+}
+.col-2{
+    float: left;
+    width: calc((100% - 6rem) / 2);
+    &:not(:last-child){
+        margin-right: 6rem;
+    }
+    @include respond(md){
+        width: 100%;
+    }
+}
+.mb-sm{
+    margin-bottom: 2rem !important;
+}
+.mb-md{
+    margin-bottom: 4rem !important;
+    @include respond(md){
+        margin-bottom: 3rem !important;
+    }
+}
+.mb-lg{
+    margin-bottom: 8rem !important;
+    @include respond(md){
+        margin-bottom: 4rem !important;
+    }
+}
+.text-center{
+    text-align: center !important;
+}

@@ -1,0 +1,73 @@
+.hotels{
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 7rem;
+    padding: 6rem 0;
+    @include  respond(lg){
+        padding: 6rem;
+    }
+}
+
+.hotel{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    background-color: $color-grey-dark-2;
+    gap:3.5rem;
+    &-img{
+        width: 100%;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    &-title{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        align-self: end;
+        background-color: $color-1;
+        color:#fff;
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        justify-self: center;
+        width: 80%;
+        transform: translateY(50%);
+        @include respond(lg){
+            font-size: 1.6rem;
+        }
+    }
+    &-like{
+        width: 2.5rem;
+        height: 2.5rem;
+        grid-column: 2/-1;
+        grid-row: 1/2;
+        justify-self: end;
+        margin: 1rem;
+        fill: $color-4;
+    }
+
+    &-location,&-wifi,&-dollar,&-man{
+        display: flex;
+        font-size: 1.5rem;
+        margin-left: 2rem;
+        align-items: center;
+    }
+    &-location,&-man{
+        margin-top: 2.5rem;
+    }
+    &-location svg,&-wifi svg,&-dollar svg,&-man svg{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        fill:$color-4;
+    }
+    &-btn{
+        grid-column: 1/-1;
+        border: none;
+        background-color: $color-4;
+        color:#fff;
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+}

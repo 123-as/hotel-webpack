@@ -1,0 +1,107 @@
+$color-1:#3370A6;
+$color-2:#5681A6;
+$color-3:#BBDDF2;
+$color-4:#BF8B2A;
+$color-5:#735134;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #f7f7f7;
+*,*::before,*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+
+    @include  respond(lg){
+        font-size: 56.25%;   //9px
+    }
+    @include  respond(md){
+        font-size: 50%;   //8px
+    }
+}
+body{
+    box-sizing: border-box;
+    color:$color-grey-dark;
+    line-height: 1.7;
+    font-weight: 300;
+}
+.heading-1{
+    color:#fff;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    @include respond(md){
+        letter-spacing: .5rem;
+    }
+    span:first-child{
+        font-size: 6rem;
+        display: block;
+    }
+    span:last-child{
+        font-size: 2.5rem;
+        @include respond(md){
+            font-size: 2rem;
+        }
+    }
+}
+.heading-2{
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: .2rem;
+    font-style: italic;
+    color:$color-2;
+    text-transform: uppercase;
+    @include  respond(md){
+        font-size: 2.5rem;
+    }
+}
+.heading-4{
+    font-size: 1.8rem;
+    @include  respond(md){
+        font-size: 1.4rem;
+    }
+}
+
+.btn{
+    display: inline-block;
+    background-color: #fff;
+    color:$color-grey-dark;
+    text-decoration: none;
+    padding: 2rem 2.5rem;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .2s;
+    position: relative;
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow:0 1rem 4rem rgba(#000,.2);
+    }
+    &:hover:after{
+        transform: scale(1.4);
+        opacity: 0;
+    }
+    &:active{
+        transform: translateY(-1px);
+        box-shadow:0 .5rem 2rem rgba(#000,.4);
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+        background-color: #fff;
+        border-radius: 100px;
+        z-index: -1;
+        transition: all .4s;
+    }
+    @include  respond(sm){
+        padding: 1.5rem;
+        font-size: 1.3rem;
+    }
+}
