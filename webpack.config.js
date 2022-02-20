@@ -9,7 +9,7 @@ module.exports={
     },
     output:{
         filename:"js/[name].js",
-        path:resolve(__dirname,"build"),
+        path:resolve(__dirname,"dist"),
         assetModuleFilename:"img/[contenthash:10][ext]"
     },
     module:{
