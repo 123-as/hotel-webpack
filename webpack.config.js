@@ -40,6 +40,9 @@ module.exports={
             }
         ]
     },
+    devServer:{
+        contentBase:'./dist'
+    },
     plugins:[
         new htmlWebpackPlugin({
             template:"./src/index.html",
