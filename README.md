@@ -8,3 +8,4 @@
 * 導入雙頁面
 
 點擊discover即可到另一頁面
+![image](https://github.com/123-as/hotel-webpack/blob/master/hotel.png)
